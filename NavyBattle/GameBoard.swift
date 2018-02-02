@@ -11,6 +11,7 @@ import Foundation
 struct GameBoard {
     static let lines = (1...10).map({ return $0 })
     static let columns = "ABCDEFGHIJ".map({ return $0 })
+    private let cardinalPoint = ["north", "south", "east", "west"]
     
     var gameBoard: [CasePosition: CaseState] = [:]
     var ships : [Ship] = []
@@ -35,6 +36,17 @@ struct GameBoard {
         let torpilleurCases = [CasePosition(line: 4, column: "E"), CasePosition(line: 4, column: "F")]
         let torpilleur = Ship(cases: torpilleurCases)
         return [torpilleur, contreTorpilleur]
+    }
+    
+    private func createShip(_ length: Int) -> Ship {
+        let randomRow = GameBoard.lines[Int(arc4random_uniform(10))]
+        let randomColumn = GameBoard.columns[Int(arc4random_uniform(10))]
+        let direction = cardinalPoint[Int(arc4random_uniform(4))]
+        
+        
+        
+        let contreTorpilleurCases = [CasePosition(line: 1, column: "B"), CasePosition(line: 2, column: "B"), CasePosition(line: 3, column: "B")]
+        let contreTorpilleur = Ship(cases: contreTorpilleurCases)
     }
     
     func displayBoard() {

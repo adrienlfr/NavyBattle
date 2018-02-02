@@ -10,7 +10,7 @@ import Foundation
 
 struct Ship {
     let cases: [CasePosition]
-    let striked: Bool = false
+    
     
     var description: String {
         var description = "Bateau"
@@ -33,4 +33,5 @@ struct Ship {
         let isAt = cases.contains(casePosition)
         return isAt
     }
+    
 }
