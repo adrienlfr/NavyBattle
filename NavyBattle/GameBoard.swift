@@ -43,7 +43,7 @@ struct GameBoard {
         let randomColumn = GameBoard.columns[Int(arc4random_uniform(10))]
         let direction = cardinalPoint[Int(arc4random_uniform(4))]
         
-        
+         
         
         let contreTorpilleurCases = [CasePosition(line: 1, column: "B"), CasePosition(line: 2, column: "B"), CasePosition(line: 3, column: "B")]
         let contreTorpilleur = Ship(cases: contreTorpilleurCases)
