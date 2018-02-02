@@ -77,4 +77,8 @@ struct GameBoard {
         }
         return nil
     }
+    
+    mutating func switchCaseStateTo(_ caseToPlay: CasePosition, _ caseState: CaseState) {
+        gameBoard[caseToPlay] = caseState
+    }
 }
