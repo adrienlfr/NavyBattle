@@ -9,8 +9,21 @@
 import Foundation
 
 struct GameBoard {
+    static let lines = (1...10).map({ return $0 })
+    static let columns = "ABCDEFGHIJ".map({ return $0 })
+    
     var gameBoard: [CasePosition: CaseState] = [:]
     var ships : [Ship] = []
+    var allShipsStricke: Bool {
+        var allShipsStricked = true
+        for ship in ships {
+            if isShipEntirelyStriked(ship) == false {
+                allShipsStricked = false
+                break
+            }
+        }
+        return allShipsStricked
+    }
     
     init() {
         positionShips().forEach { ship in ships.append(ship) }
@@ -26,15 +39,15 @@ struct GameBoard {
     
     func displayBoard() {
         var headline = "  "
-        for column in columns {
+        for column in GameBoard.columns {
             headline += "|\(column)"
         }
         headline += "|"
         print(headline)
-        for line in lines {
+        for line in GameBoard.lines {
             var printLine = String(format: "%*2d", 2, line) // https://en.wikipedia.org/wiki/Printf_format_string
             printLine += "|"
-            for column in columns {
+            for column in GameBoard.columns {
                 let casePosition = CasePosition(line: line, column: column)
                 var character: Character = " "
                 if let caseState = gameBoard[casePosition] {
@@ -58,16 +71,7 @@ struct GameBoard {
         return entirelyStriked
     }
     
-    func allShipsStricked() -> Bool {
-        var allShipsStricked = true
-        for ship in ships {
-            if isShipEntirelyStriked(ship) == false {
-                allShipsStricked = false
-                break
-            }
-        }
-        return allShipsStricked
-    }
+    
     
     func isAShipAtThisPosition(_ casePosition: CasePosition) -> Ship? {
         for ship in ships {
