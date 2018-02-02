@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9720ED0E202446870034D3B5 /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9720ED0D202446870034D3B5 /* GameBoard.swift */; };
+		9720ED10202446A50034D3B5 /* Ship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9720ED0F202446A50034D3B5 /* Ship.swift */; };
+		9720ED12202446C70034D3B5 /* CasePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9720ED11202446C70034D3B5 /* CasePosition.swift */; };
+		9720ED14202447730034D3B5 /* CaseState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9720ED13202447730034D3B5 /* CaseState.swift */; };
 		BAA7207E1E3A8691007EC360 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7207D1E3A8691007EC360 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +27,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9720ED0D202446870034D3B5 /* GameBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
+		9720ED0F202446A50034D3B5 /* Ship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ship.swift; sourceTree = "<group>"; };
+		9720ED11202446C70034D3B5 /* CasePosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasePosition.swift; sourceTree = "<group>"; };
+		9720ED13202447730034D3B5 /* CaseState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseState.swift; sourceTree = "<group>"; };
 		BAA7207A1E3A8691007EC360 /* NavyBattle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NavyBattle; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAA7207D1E3A8691007EC360 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +66,10 @@
 			isa = PBXGroup;
 			children = (
 				BAA7207D1E3A8691007EC360 /* main.swift */,
+				9720ED0D202446870034D3B5 /* GameBoard.swift */,
+				9720ED0F202446A50034D3B5 /* Ship.swift */,
+				9720ED11202446C70034D3B5 /* CasePosition.swift */,
+				9720ED13202447730034D3B5 /* CaseState.swift */,
 			);
 			path = NavyBattle;
 			sourceTree = "<group>";
@@ -121,6 +133,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9720ED0E202446870034D3B5 /* GameBoard.swift in Sources */,
+				9720ED10202446A50034D3B5 /* Ship.swift in Sources */,
+				9720ED14202447730034D3B5 /* CaseState.swift in Sources */,
+				9720ED12202446C70034D3B5 /* CasePosition.swift in Sources */,
 				BAA7207E1E3A8691007EC360 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,6 +269,7 @@
 				BAA720831E3A8691007EC360 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
